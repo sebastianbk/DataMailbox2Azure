@@ -63,6 +63,22 @@ Below is an example of what the `settings.json` file could look like:
 }
 ```
 
+Running DataMailbox2Azure
+-------------------------
+
+Assuming you have installed the .NET Core CLI tools and that you have created a `settings.json` file, you can execute the following commands to run DataMailbox2Azure:
+
+```
+dotnet restore
+dotnet build
+```
+
+Move the `settings.json` file to the folder with the executing assembly (e.g., `DataMailbox2Azure.dll`). Then run:
+
+```
+dotnet run
+```
+
 Support
 -------
 
