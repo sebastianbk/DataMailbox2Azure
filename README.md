@@ -30,13 +30,13 @@ The tool requires that a `settings.json` file exist in the same directory as the
     },
     "IoTHub":
     {
-        "KeyName": "IOTHUB-OWNER-POLICY-NAME", // E.g., iothubowner
+        "KeyName": "IOTHUB-OWNER-POLICY-NAME",
         "KeyValue": "IOTHUB-OWNER-POLICY-KEY",
-        "HostName": "IOTHUB-HOSTNAME", // E.g., (IOTHUB-NAME).azure-devices.net
-        "TimeToLive": 365 // Number of days the SAS token should be valid
+        "HostName": "IOTHUB-HOSTNAME",
+        "TimeToLive": 365
     },
-    "LastTransactionId": null, // Last transaction ID used in the syncdata service offered by Talk2M
-    "IntervalInSeconds": 5 // The number of seconds between each cycle
+    "LastTransactionId": null,
+    "IntervalInSeconds": 5
 }
 ```
 
