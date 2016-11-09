@@ -105,8 +105,7 @@ namespace DataMailbox2Azure
 
         private void CreateDeviceIfItDoesNotExist(string deviceId)
         {
-            var url = string.Format("devices/{1}?api-version=2016-02-03",
-                Configuration.Instance.IoTHubHostName,
+            var url = string.Format("devices/{0}?api-version=2016-02-03",
                 deviceId);
             var getResult = iotHubHttpClient.GetAsync(url).Result;
             var deviceExists = getResult.IsSuccessStatusCode;
@@ -126,8 +125,7 @@ namespace DataMailbox2Azure
         private void PostEventToIoTHub(string deviceId, string message)
         {
             var stringContent = new StringContent(message, Encoding.UTF8, "application/json");
-            var url = string.Format("devices/{1}/messages/events?api-version=2016-02-03",
-                Configuration.Instance.IoTHubHostName,
+            var url = string.Format("devices/{0}/messages/events?api-version=2016-02-03",
                 deviceId);
             var result = iotHubHttpClient.PostAsync(url, stringContent).Result;
         }
